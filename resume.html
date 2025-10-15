@@ -5,7 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume - Rashmi C</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e6e6fa, #d9fdd3);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #b49fcc;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    .navbar nav a.active {
+      text-decoration: underline;
+    }
+
+    .resume-container {
+      max-width: 700px;
+      background: #fff;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .resume-photo {
+      width: 100px;        /* passport size width */
+      height: 100px;       /* passport size height */
+      border-radius: 50%;  /* makes it circular */
+      object-fit: cover;   /* keeps proportions */
+      border: 3px solid #b49fcc;  /* soft lavender border */
+      box-shadow: 0 4px 10px rgba(180, 159, 204, 0.4);
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+      color: #6b5b95;
+    }
+
+    .resume-details h3 {
+      color: #6b5b95;
+      margin-top: 25px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 5px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #b49fcc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #9d85c4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #b49fcc;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+
 <body>
   <header class="navbar">
     <h1>📄 Rashmi’s Resume</h1>
@@ -18,7 +110,7 @@
 
   <section class="resume-container">
     <div class="profile-section">
-      <img src="rashmi-photo.jpg" alt="Rashmi C" class="resume-photo" />
+      <img src="profile.jpg" alt="Rashmi C" class="resume-photo">
       <h2>Rashmi C</h2>
       <p><strong>Software Engineer</strong></p>
     </div>
@@ -36,7 +128,7 @@
       </ul>
 
       <h3>📞 Contact</h3>
-      <p>Email: rashmi@example.com</p>
+      <p>Email: rashmi@gmail.com</p>
       <p>Phone: +91 98765 43210</p>
 
       <a href="#" id="downloadBtn" class="btn">⬇️ Download Resume</a>
@@ -47,7 +139,7 @@
     <p>© 2025 Rashmi | Designed with 💜 elegance</p>
   </footer>
 
-  <!-- JS to create PDF automatically -->
+  <!-- JS for PDF download -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById("downloadBtn").addEventListener("click", () => {
