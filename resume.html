@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Rashmi C</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>📄 Rashmi’s Resume</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html" class="active">Resume</a>
+      <a href="biodata.html">Bio-data</a>
+    </nav>
+  </header>
+
+  <section class="resume-container">
+    <div class="profile-section">
+      <img src="rashmi-photo.jpg" alt="Rashmi C" class="resume-photo" />
+      <h2>Rashmi C</h2>
+      <p><strong>Software Engineer</strong></p>
+    </div>
+
+    <div class="resume-details">
+      <h3>🎓 Education</h3>
+      <p>B.Tech in Computer Science, A J Institute of Engineering and Technology (2023–2027)</p>
+
+      <h3>💡 Skills</h3>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript, PHP)</li>
+        <li>Python & Java Programming</li>
+        <li>Database Management (MySQL)</li>
+        <li>UI/UX Design & Responsive Web Design</li>
+      </ul>
+
+      <h3>📞 Contact</h3>
+      <p>Email: rashmi@example.com</p>
+      <p>Phone: +91 98765 43210</p>
+
+      <a href="#" id="downloadBtn" class="btn">⬇️ Download Resume</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Rashmi | Designed with 💜 elegance</p>
+  </footer>
+
+  <!-- JS to create PDF automatically -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", () => {
+      const element = document.querySelector(".resume-container");
+      const options = {
+        margin: 0.5,
+        filename: 'Rashmi_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(options).save();
+    });
+  </script>
+</body>
+</html>
